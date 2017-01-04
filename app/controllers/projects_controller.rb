@@ -16,13 +16,13 @@ class ProjectsController < ApplicationController
       flash[:notice] = "Project has been created"
       redirect_to @project
     else
-      flash[:notice] = "Project has not been saved"
+      flash[:alert] = "Project has not been created"
       render "new"
     end
   end
 
   def show
-  
+
   end
 
   def edit
@@ -35,7 +35,7 @@ class ProjectsController < ApplicationController
       flash[:notice] = "Project has been updated"
       redirect_to @project
     else
-      flash[:notice] = "Project has not been updated"
+      flash[:alert] = "Project has not been updated"
       render "edit"
     end
   end
@@ -44,7 +44,7 @@ class ProjectsController < ApplicationController
 
     @project.destroy
 
-    flash[:notice] = "Project has been deleted"
+    flash[:alert] = "Project has been deleted"
     redirect_to projects_path
   end
 

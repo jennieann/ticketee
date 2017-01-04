@@ -22,10 +22,10 @@ RSpec.feature "User can create new projects" do
 
     end
     scenario "with invalid attributes" do
-    
+
       click_button "Create Project"
 
-      expect(page).to have_content "Project has not been saved"
+      expect(page).to have_content "Project has not been created"
       expect(page).to have_content "Name can't be blank"
     end
 
